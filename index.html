@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+	<meta charset="UTF-8">
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<link rel="canonical" href="https://benihassan.com">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<title></title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+
+@font-face {
+  font-family: 'roboto';
+  src: 
+    url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
+    url('/fonts/roboto-regular-webfont.woff') format('woff'),
+    url('/fonts/roboto-regular-webfont.ttf') format('truetype'),
+    url('/fonts/roboto-regular-webfont.svg#roboto-regular-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* noto-sans-regular - latin-ext_latin */
+@font-face {
+    font-family: 'Font Does Not exist';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/FontDoesNotExist.ttf) format('truetype');
+  }
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+
+  src: 
+       /*url('/fonts/noto-sans-v7-latin-ext_latin-regular.ttf') format('truetype');*/
+       url('https://github.com/googlefonts/noto-fonts/blob/master/phaseIII_only/hinted/ttf/NotoSans/NotoSans-Regular.ttf?raw=true') format('truetype');
+}
+
+
+
+	body{
+		
+		text-rendering:optimizeLegibility;
+		font-size: 80pt;
+		font-style: inherit;
+	}
+	div {
+	width: 800px;
+	text-align: center;
+}	
+ 
+ .roboto {
+ 	    font-family: 'Roboto', serif, sans-serif;
+
+ }
+ .unavailable-font-loaded .unavailable-font {
+    font-family: 'Font Does Not exist', serif, sans-serif;
+  }
+  .comicamp-loaded .comicamp {
+    font-family: 'Noto Sans', serif, sans-serif;
+  }
+  .another-unavailable-font-loaded .another-unavailable-font {
+    font-family: 'Another Font That Does Not exist', serif, sans-serif;
+  }
+  .unavailable-font-loading, .comicamp-loading, .another-unavailable-font-loading {
+    color: blue;
+  }
+  .unavailable-font-loading .unavailable-font,
+    .comicamp-loading .comicamp,
+      .another-unavailable-font-loading .another-unavailable-font {
+        color: aqua;
+  }
+  .unavailable-font-missing .unavailable-font,
+    .comicamp-missing .comicamp,
+      .another-unavailable-font-missing .another-unavailable-font  {
+        color: red;
+  }
+
+</style>
+</head>
+<body>
+<h1> Rendered with webfonts</h1> 
+
+(Test <a href="browserDefault.html">Browser Default rendering</a>)
+
+<amp-font  layout="nodisplay"
+  font-family="Font Does Not exist"
+  timeout="2000"
+  on-error-remove-class="unavailable-font-loading"
+  on-error-add-class="unavailable-font-missing"
+  on-load-remove-class="unavailable-font-loading"
+  on-load-add-class="unavailable-font-loaded">
+</amp-font>
+  <amp-font layout="nodisplay"
+    font-family="Noto Sans"
+    timeout="2000"
+    on-error-remove-class="comicamp-loading"
+    on-error-add-class="comicamp-missing"
+    on-load-remove-class="comicamp-loading"
+    on-load-add-class="comicamp-loaded">
+  </amp-font>
+<div class="roboto">
+		Roboto (as sample generic webfont)
+		<br/>
+"Ꜥ" "ḥ" "Ꜣ" "Ꜥ"
+
+<br>
+
+"&#42788;" "&#7717;" "&#42786;" "&#42788;"
+
+</div>
+	<div class="comicamp">
+		Noto sans via <a href="https://github.com/googlefonts/noto-fonts/tree/master/phaseIII_only/hinted/ttf/NotoSans">https://github.com/googlefonts/noto-fonts/tree/master/phaseIII_only/hinted/ttf/NotoSans</a>
+		<br/>
+"Ꜥ" "ḥ" "Ꜣ" "Ꜥ"
+
+<br>
+
+"&#42788;" "&#7717;" "&#42786;" "&#42788;"
+
+</div>
+
+<div class="unavailable-font">
+	broken<br/>
+"Ꜥ" "ḥ" "Ꜣ" "Ꜥ"
+
+<br>
+
+"&#42788;" "&#7717;" "&#42786;" "&#42788;"
+
+</div>
+</body>
+</html>
